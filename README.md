@@ -27,6 +27,12 @@ cd ~/.dotfiles
 ./install.sh
 ```
 
+During installation, you will be asked if zsh should become your default terminal. After confirming, you will be launched into zsh. To continue the installation, exit zsh.
+
+```bash
+exit
+```
+
 ### 5. Reload shell configuration
 
 After that, make sure to source your shell configuration file.
