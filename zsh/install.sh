@@ -10,6 +10,6 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 echo "Dependencies installed!"
 
 echo "Configure symlinks"
-stow .
+stow zsh
 
 echo "Dotfiles applied"

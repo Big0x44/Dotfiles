@@ -1,16 +1,13 @@
 # Dotfiles
 
+## Prerequisites
+
+1. GNU Stow is required to install the dotfiles. Install it using your package manager.
+2. MesloLGS NF font is required for some of the configurations (e. g. zsh or alacritty). Follow the instructions [here](https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#meslo-nerd-font-patched-for-powerlevel10k) to install the font.
+
 ## Installation
 
-### 1. Install fonts
-
-Follow [this link](https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#meslo-nerd-font-patched-for-powerlevel10k) to install the fonts.
-
-### 2. Configure font
-
-Make sure to set the MesloLGS NF font in your terminal.
-
-### 3. Clone repository
+### 1. Clone repository
 
 Clone the repository into a hidden directory in your home directory.
 
@@ -18,23 +15,22 @@ Clone the repository into a hidden directory in your home directory.
 git clone git@github.com:Big0x44/Dotfiles.git ~/.dotfiles
 ```
 
-### 4. Install dotfiles
+### 2. Install dotfiles
 
-Move into the cloned repository and run the install script.
+Move into the cloned repository.
 
 ```bash
 cd ~/.dotfiles
-./install.sh
 ```
 
-### 5. Reload shell configuration
-
-After that, make sure to source your shell configuration file.
+Use GNU Stow to install the dotfiles. E. g. to install the alacritty configuration:
 
 ```bash
-source ~/.zshrc
+stow alacritty
 ```
 
+> [!NOTE]
+> Zsh uses a custom installation script. Follow the instructions in the zsh directory.
+
 ## TODOs
-- Choose default terminal emulator and provide configuration.
 - Add configuration of VS Codium.
