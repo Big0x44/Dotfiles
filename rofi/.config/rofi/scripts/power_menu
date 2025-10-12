@@ -33,50 +33,21 @@ main() {
   # run the selected command
   case $choice in
   '   Poweroff')
-	ans=$(get_confirmation)
-	if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
-	    systemctl poweroff
-	elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
-	    exit
-        else
-	    exit
-        fi
+	systemctl poweroff
     ;;
   '   Reboot')
- 	ans=$(get_confirmation)
- 	if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
- 	    systemctl reboot
- 	elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
- 	    exit
- 	else
- 	    exit
- 	fi
-    # systemctl reboot
+ 	systemctl reboot
     ;;
   '   Lock')
       hyprlock
     ;;
   '   Suspend')
-    	ans=$(get_confirmation)
-	if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
-	  mpc -q pause
-	  amixer set Master mute
-	  betterlockscreen --suspend
-	elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
-	    exit
-  else
-	    exit
-  fi
+    	mpc -q pause
+	amixer set Master mute
+	betterlockscreen --suspend
     ;;
   '   Logout')
-	ans=$(get_confirmation)
-	if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
-      hyprctl dispatch exit
-	elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
-	    exit
-  else
-	    exit
-  fi
+	hyprctl dispatch
     ;;
   esac
 
