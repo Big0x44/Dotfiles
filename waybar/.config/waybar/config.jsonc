@@ -29,8 +29,11 @@
         "max-length": 50
     },
     "hyprland/workspaces": {
+        "all-outputs": false,
         "persistent-workspaces": {
-            "*": 5
+            "LG Electronics LG ULTRAGEAR+ 407NTZNAZ109": [1,4,7],
+            "BNQ BenQ GL2480 Y4L01256019": [2,5,8],
+            "eDP-1": [3,6,9]
         }
     },
     "cpu": {
