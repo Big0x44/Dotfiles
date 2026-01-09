@@ -1,0 +1,3 @@
+rofi -no-lazy-grab \
+-modi "drun" -show drun \
+-theme ~/.config/rofi/themes/app_menu.rasi
